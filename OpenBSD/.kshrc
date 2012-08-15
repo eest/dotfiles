@@ -1,0 +1,1 @@
+alias zzz='xlock & zzz'
