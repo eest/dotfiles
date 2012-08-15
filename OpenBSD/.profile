@@ -2,3 +2,4 @@ PATH=$HOME/bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/X11R6/bin:/usr/local/bin:/usr/
 export PATH HOME TERM
 export PS1='\u@\h:\w\$ '
 export ENV=$HOME/.kshrc
+export LSCOLORS='Exgxcxdxbxegedabagacad'
