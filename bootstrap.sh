@@ -15,7 +15,7 @@ cd ${BASEDIR}
 git pull
 
 # Sync default files.
-${RSYNC} ./default/ ${HOME}/
+${RSYNC} ./default/ ${HOME}
 
 # Sync any OS-specific files if they exist.
 if [ -d ./${OS} ]; then
