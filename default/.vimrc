@@ -21,6 +21,7 @@ set fo=tcrqn
 set ai
 set si
 set cindent
+set cinkeys=0{,0},0),:,!^F,o,O,e
 set tabstop=8
 set softtabstop=4
 set shiftwidth=4
