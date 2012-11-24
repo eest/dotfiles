@@ -4,3 +4,4 @@ export PATH HOME TERM
 export PS1='\u@\h:\w\$ '
 export ENV=$HOME/.kshrc
 export LSCOLORS='Exgxcxdxbxegedabagacad'
+export GIT_EDITOR=vim
