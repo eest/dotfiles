@@ -15,8 +15,8 @@ sleep 1
 fsck -p ${CRYPTOFS}
 if [ $? -eq 0 ]; then
     mount -o nodev,nosuid ${CRYPTOFS} ${MOUNTPOINT}
-    sleep 2
 else 
     echo "fsck of CRYPTOFS ${CRYPTOFS} failed, not mounting ${MOUNTPOINT}"
-    sleep 2
 fi
+
+sleep 2
