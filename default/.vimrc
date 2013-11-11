@@ -39,3 +39,4 @@ function Svn_diff()
 endfunction
 
 au FileType mail set nocindent
+au FileType mail set textwidth=72
