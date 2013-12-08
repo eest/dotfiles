@@ -4,9 +4,11 @@
 # Automatic OpenBSD sysmerge script.
 #
 
-basepath="http://ftp.eu.openbsd.org/pub/OpenBSD"
-arch=$(uname -p)
-release=$(uname -r | sed 's/\.//')
-rdir=$(awk -F/ '/installpath/{print $6}' /etc/pkg.conf)
+pkg_conf="/etc/pkg.conf"
 
-sysmerge -s ${basepath}/${rdir}/${arch}/etc${release}.tgz -x ${basepath}/${rdir}/${arch}/xetc${release}.tgz
+basepath=$(sed 's,installpath = \(.*pub/OpenBSD\).*,\1,' ${pkg_conf})
+arch=$(uname -p)
+tarball_version=$(uname -r | sed 's/\.//')
+release_dir=$(awk -F/ '/installpath/{print $6}' ${pkg_conf})
+
+sysmerge -s ${basepath}/${release_dir}/${arch}/etc${tarball_version}.tgz -x ${basepath}/${release_dir}/${arch}/xetc${tarball_version}.tgz
