@@ -27,6 +27,8 @@ set softtabstop=4
 set shiftwidth=4
 set expandtab
 
+set pastetoggle=<F2>
+
 let perl_extended_vars=1 " highlight advanced perl vars inside strings
 
 " SVN commit diff
