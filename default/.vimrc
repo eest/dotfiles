@@ -28,6 +28,7 @@ set shiftwidth=4
 set expandtab
 
 set pastetoggle=<F2>
+nnoremap <F3> :set list!<CR>
 
 let perl_extended_vars=1 " highlight advanced perl vars inside strings
 
