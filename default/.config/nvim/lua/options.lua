@@ -21,6 +21,7 @@ vim.opt.listchars = {
     precedes = '<',
     eol = '$'
 }
+vim.g.mapleader = ' '
 
 -- Always show the signcolumn, otherwise it would shift the text each
 -- time diagnostics appear/become resolved.
