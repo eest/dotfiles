@@ -4,7 +4,7 @@ require('packer').startup(function()
   use 'wbthomason/packer.nvim' -- Package manager
   use 'neovim/nvim-lspconfig' -- Configurations for Nvim LSP
   use 'preservim/nerdtree' -- File browser window
-  use 'morhetz/gruvbox' -- Colortheme
+  use 'gruvbox-community/gruvbox' -- Colortheme
   use 'ryanoasis/vim-devicons' -- Always load the vim-devicons as the very last one.
   -- https://github.com/neovim/nvim-lspconfig/wiki/Autocompletion
   use 'hrsh7th/nvim-cmp' -- Autocompletion plugin
