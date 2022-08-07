@@ -1,5 +1,3 @@
-vim.opt.history = 1000
-vim.opt.background = "dark"
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.showmatch = true
