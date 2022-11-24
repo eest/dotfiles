@@ -4,13 +4,15 @@ if vim.fn.has('nvim-0.7.0') == 1 then
         command = [[:call matchadd('Error', '\s\+$', -1) | call matchadd('Error', '\%u00A0')]]
     })
 
-    vim.api.nvim_create_autocmd({"FileType mail"}, {
-        command = "set nocindent"
-    })
+    vim.api.nvim_create_autocmd(
+        "FileType",
+        { pattern = {"mail"} , command = "set nocindent" }
+    )
 
-    vim.api.nvim_create_autocmd({"FileType mail"}, {
-        command = "set textwidth=72"
-    })
+    vim.api.nvim_create_autocmd(
+        "FileType",
+        { pattern = {"mail"} , command = "set textwidth=72" }
+    )
 
     --[[
     -- Make NERDTree open automatically on startup
