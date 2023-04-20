@@ -149,7 +149,7 @@ end
 vim.api.nvim_create_autocmd("BufWritePre", {
     pattern = "*.go",
     --callback = function() OrgImports(1000) end,
-    callback = vim.lsp.buf.formatting,
+    callback = vim.lsp.buf.format,
 })
 
 vim.api.nvim_create_autocmd("BufWritePre", {
