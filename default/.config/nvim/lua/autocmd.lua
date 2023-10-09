@@ -18,4 +18,9 @@ if vim.fn.has('nvim-0.7.0') == 1 then
         "FileType",
         { pattern = {"go"} , command = "set noexpandtab" }
     )
+
+    vim.api.nvim_create_autocmd(
+        "FileType",
+        { pattern = {"go"} , command = "set shiftwidth=0" }
+    )
 end
