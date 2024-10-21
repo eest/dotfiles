@@ -1,7 +1,6 @@
 -- https://github.com/neovim/nvim-lspconfig#suggested-configuration
 -- Mappings.
--- See `:help vim.diagnostic.*` for documentation on any of the below functions
-local opts = { noremap=true, silent=true }
+-- See `:help vim.diagnostic.*` for documentation on any of the below functions local opts = { noremap=true, silent=true }
 vim.keymap.set('n', '<space>e', vim.diagnostic.open_float, opts)
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opts)
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
@@ -66,8 +65,10 @@ require('lspconfig')['rust_analyzer'].setup{
     }
 }
 -- https://github.com/golang/tools/blob/master/gopls/doc/vim.md#neovim-config
-local lspconfig = require("lspconfig")
-lspconfig.gopls.setup({
+require('lspconfig')['gopls'].setup({
+  on_attach = on_attach,
+  flags = lsp_flags,
+  capabilities = capabilities,
   settings = {
     gopls = {
       analyses = {
