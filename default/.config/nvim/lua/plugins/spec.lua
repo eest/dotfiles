@@ -9,4 +9,19 @@ return {
   { 'nvim-telescope/telescope.nvim', opts = {version = '0.1.8', dependencies = { {'nvim-lua/plenary.nvim'} } } },
   { 'tpope/vim-fugitive' }, -- git integration
   { 'airblade/vim-gitgutter' }, -- git integration
+  -- https://github.com/nvim-treesitter/nvim-treesitter/wiki/Installation#lazynvim
+  {
+    "nvim-treesitter/nvim-treesitter",
+    build = ":TSUpdate",
+    config = function ()
+      local configs = require("nvim-treesitter.configs")
+
+      configs.setup({
+          ensure_installed = { "templ" },
+          sync_install = false,
+          highlight = { enable = true },
+          indent = { enable = true },
+      })
+    end
+  },
 }
