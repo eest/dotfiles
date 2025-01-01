@@ -64,6 +64,11 @@ require('lspconfig')['rust_analyzer'].setup{
       ["rust-analyzer"] = {}
     }
 }
+require('lspconfig')['templ'].setup{
+    on_attach = on_attach,
+    flags = lsp_flags,
+    capabilities = capabilities,
+}
 -- https://github.com/golang/tools/blob/master/gopls/doc/vim.md#neovim-config
 require('lspconfig')['gopls'].setup({
   on_attach = on_attach,
