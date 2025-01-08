@@ -24,6 +24,16 @@ if vim.fn.has('nvim-0.7.0') == 1 then
         { pattern = {"go"} , command = "set shiftwidth=0" }
     )
 
+    vim.api.nvim_create_autocmd(
+        "FileType",
+        { pattern = {"templ"} , command = "set noexpandtab" }
+    )
+
+    vim.api.nvim_create_autocmd(
+        "FileType",
+        { pattern = {"templ"} , command = "set shiftwidth=0" }
+    )
+
     vim.api.nvim_create_autocmd({"BufEnter"}, {
         command = ":syntax sync fromstart"
     })
